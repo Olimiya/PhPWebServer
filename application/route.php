@@ -8,6 +8,9 @@
 // +----------------------------------------------------------------------
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
+use think\Route;
+Route::rule('new/:data','check_basicinfo/CheckBasicInfoController/index');
+Route::rule('basic/:class','check_basicinfo/CheckBasicInfoController/getInfoByClass');
 
 return [
     '__pattern__' => [

@@ -3,6 +3,7 @@
 
 namespace app\log_in\model;
 
+use think\Db;
 
 class LogInModel
 {
