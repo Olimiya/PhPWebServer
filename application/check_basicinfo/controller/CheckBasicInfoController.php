@@ -18,12 +18,4 @@ class CheckBasicInfoController
         $result = CheckBasicInfoModel::getStudentBasicInfoByClass($class);
         return $result;
     }
-    /**
-     * 老师根据自己教授的班级查询相应的学生
-     */
-    public function getInfoByCourse($course_name)
-    {
-        $result = CheckBasicInfoModel::getStudentBasicInfoByCourse($course_name);
-        return $result;
-    }
 }
