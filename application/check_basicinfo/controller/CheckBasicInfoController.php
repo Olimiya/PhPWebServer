@@ -18,4 +18,7 @@ class CheckBasicInfoController
         $result = CheckBasicInfoModel::getStudentBasicInfoByClass($class);
         return $result;
     }
+
+    
+
 }
