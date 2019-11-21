@@ -9,9 +9,15 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 use think\Route;
+Route::rule('login/:id/:kwd/:role',
+    'log_in/IndexController/getInput');
+Route::rule('logintest/:id',
+    'log_in/IndexController/test');
+
 Route::rule('new/:data','check_basicinfo/CheckBasicInfoController/index');
 Route::rule('basic/:class','check_basicinfo/CheckBasicInfoController/getInfoByClass');
 Route::rule('grade/:id/:grade','entry_grade/EntryGradeController/inputGrade');
+
 
 return [
     '__pattern__' => [
