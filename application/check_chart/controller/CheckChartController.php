@@ -3,7 +3,7 @@
 
 namespace app\check_chart\controller;
 
-
+use app\check_chart\model\CheckChartModel;
 class CheckChartController
 {
     public function getNameChartByClass($class)
@@ -26,6 +26,4 @@ class CheckChartController
         $result = CheckChartModel::getStudentPhoto($class);
         return $result;
     }
-
-
 }

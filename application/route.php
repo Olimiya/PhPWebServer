@@ -9,15 +9,29 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 use think\Route;
-Route::rule('login/:id/:kwd/:role',
-    'log_in/IndexController/getInput');
-Route::rule('logintest/:id',
-    'log_in/IndexController/test');
 
+
+
+//登录模块路由
+Route::rule('log_in/:id/:kwd/:role','log_in/IndexController/getInput');
+Route::rule('logintest/:id', 'log_in/IndexController/test');
+//编辑个人信息模块路由
+Route::rule('modify_info/:role/:id/:kwd/:phone_number/:introduction/:duty/:sequence_number/:location_number',
+    'modify_personalinfo/ModifyPersonalInfo/modifyInfo');
+//查询个人信息模块路由
+Route::rule('check_info/:id/:role',
+    'check_personalinfo/CheckPersonalInfoController/getInfoById');
+//查询学生基本信息模块路由
 Route::rule('new/:data','check_basicinfo/CheckBasicInfoController/index');
 Route::rule('basic/:class','check_basicinfo/CheckBasicInfoController/getInfoByClass');
+//修改学生成绩模块路由
 Route::rule('grade/:id/:grade','entry_grade/EntryGradeController/inputGrade');
-Route::rule('log/:id/:kwd/:role','log_in/IndexController/getInput');
+//查询表格模块路由
+Route::rule('name_chart/:class','check_chart/CheckChartController/getNameChartByClass');
+Route::rule('seat_chart/:class','check_chart/CheckChartController/getSeatingChartByClass');
+Route::rule('phone_chart/:class','check_chart/CheckChartController/getPhoneNumberByClass');
+/*=======================无效路由*/
+Route::rule('photo_chart/:class','check_chart/CheckChartController/getPhotoByClass');
 
 
 return [
@@ -28,5 +42,4 @@ return [
         ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
         ':name' => ['index/hello', ['method' => 'post']],
     ],
-
 ];

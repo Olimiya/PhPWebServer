@@ -17,8 +17,25 @@ class LogInModel
 
         if ($role == "student")
         {
-            $id_in_db = Db::table('student')->where('id', $id)->find();
-            $kwd_in_db = Db::query('select kwd from student where id=?', [$id_in_db]);
+            $res = Db::query('select id from student where id=?', [$id]);
+            if (count($res) >= 1)
+            {
+                $id_in_db = $res[0]["id"];
+            }
+            else
+            {
+                $id_in_db = -9999;
+            }
+
+            $res = Db::query('select kwd from student where id=?', [$id_in_db]);
+            if (count($res) >= 1)
+            {
+                $kwd_in_db = $res[0]["kwd"];
+            }
+            else
+            {
+                $kwd_in_db = -9999;
+            }
         }
         else if ($role == "teacher")
         {
@@ -42,7 +59,7 @@ class LogInModel
                 $kwd_in_db = -9999;
             }
         }
-        else if ($role == "manager")
+        else if ($role == "manager")//管理员登录
         {
             $id_in_db = "12345678";
             $kwd_in_db = "12345678";
@@ -61,6 +78,6 @@ class LogInModel
                 $result = "登陆成功";
             }
         }
-        return result;
+        return $result;
     }
 }

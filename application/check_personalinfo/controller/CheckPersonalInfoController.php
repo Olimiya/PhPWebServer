@@ -9,7 +9,7 @@
 namespace app\check_personalinfo\controller;
 use app\check_personalinfo\model\CheckPersonalInfoModel;
 
-class CheckPersonalInfo
+class CheckPersonalInfoController
 {
     public function index($data)
     {
