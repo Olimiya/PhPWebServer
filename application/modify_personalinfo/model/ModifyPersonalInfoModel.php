@@ -15,10 +15,10 @@ class ModifyPersonalInfoModel
     /**
      * 修改学生的基本信息
      */
-    public static function modifyStudentPersonalInfo( $id,$kwd ,$photo, $phone_number, $introduction, $duty, $sequence_number, $location_number)
+    public static function modifyStudentPersonalInfo( $id,$kwd , $phone_number, $introduction, $duty, $sequence_number, $location_number)
     {
         Db::query("update student set kwd = ? where id = ?",[$kwd,$id]);
-        Db::query("update student set photo = ? where id = ?",[$photo,$id]);
+        //Db::query("update student set photo = ? where id = ?",[$photo,$id]);
         Db::query("update student set phone_number = ? where id = ?",[$phone_number,$id]);
         Db::query("update student set introduction = ? where id = ?",[$introduction,$id]);
         Db::query("update student set duty = ? where id = ?",[$duty,$id]);

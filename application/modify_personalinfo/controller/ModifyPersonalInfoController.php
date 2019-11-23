@@ -21,11 +21,11 @@ class ModifyPersonalInfoController
      * 修改信息
      * 教师只能修改密码
      */
-    public function modifyInfo($role, $id, $kwd ,$photo, $phone_number, $introduction, $duty, $sequence_number, $location_number)
+    public function modifyInfo($role, $id, $kwd , $phone_number, $introduction, $duty, $sequence_number, $location_number)
     {
         if($role == "student")
         {
-            ModifyPersonalInfoModel::modifyStudentPersonalInfo( $id,$kwd ,$photo, $phone_number, $introduction, $duty, $sequence_number, $location_number);
+            ModifyPersonalInfoModel::modifyStudentPersonalInfo( $id,$kwd , $phone_number, $introduction, $duty, $sequence_number, $location_number);
         }
         else if ($role == "teacher")
         {
