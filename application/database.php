@@ -13,7 +13,7 @@ return [
     // 数据库类型
     'type'            => 'mysql',
     // 服务器地址
-    'hostname'        => '110.64.90.148',
+    'hostname'        => '279151vu51.wicp.vip',
     // 数据库名
     'database'        => 'PhPWebServer',
     // 用户名
@@ -21,7 +21,7 @@ return [
     // 密码
     'password'        => '990121',
     // 端口
-    'hostport'        => '3306',
+    'hostport'        => '18293',
     // 连接dsn
     'dsn'             => '',
     // 数据库连接参数
