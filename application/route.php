@@ -27,7 +27,7 @@ Route::rule('check_info/:id/:role',
 Route::rule('new/:data','check_basicinfo/CheckBasicInfoController/index');
 Route::rule('basic/:class','check_basicinfo/CheckBasicInfoController/getInfoByClass');
 //查询和修改学生成绩模块路由
-Route::rule('check_grade/:id/:course_id','entry_grade/EntryGradeController/checkGrade');
+Route::rule('check_grade/:course_id','entry_grade/EntryGradeController/checkGrade');
 Route::rule('modify_grade/:id/:course_id/:grade','entry_grade/EntryGradeController/inputGrade');
 //查询表格模块路由
 Route::rule('name_chart/:class','check_chart/CheckChartController/getNameChartByClass');

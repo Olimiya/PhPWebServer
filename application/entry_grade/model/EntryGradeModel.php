@@ -24,13 +24,13 @@ class EntryGradeModel
         return $res;
     }
 
-    public static function checkGrade($id, $course_id)
+    public static function checkGrade($course_id)
     {
-
+        echo 3;
         $res = Db::table('attend')
-            ->where('student_id', $id)
             ->where('course_id',$course_id)
-            ->select();
+            ->select('grade');
+        echo 4;
         return $res;
     }
 }

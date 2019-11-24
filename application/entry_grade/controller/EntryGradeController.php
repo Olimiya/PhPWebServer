@@ -24,15 +24,17 @@ class EntryGradeController
         $newGrade = EntryGradeModel::insertGrade($id, $course_id,$grade);
         return $newGrade;
     }
-    public function checkGrade($id,$course_id)
+    public function checkGrade($course_id)
     {
+        echo 1;
         header('Access-Control-Allow-Origin: *');
         header("Access-Control-Allow-Headers: token, Origin, X-Requested-With, Content-Type, Accept, Authorization");
         header('Access-Control-Allow-Methods: POST,GET,PUT,DELETE');
         if (request()->isOptions()) {
             exit();
         }
-        $grade = EntryGradeModel::checkGrade($id, $course_id);
+        echo 2;
+        $grade = EntryGradeModel::checkGrade($course_id);
         return $grade;
     }
 }
