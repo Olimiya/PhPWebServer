@@ -10,6 +10,8 @@
 // +----------------------------------------------------------------------
 use think\Route;
 
+//Route::get('log_in','log_in/IndexController/getInput');
+//Route::post('log_in','log_in/IndexController/getInput');
 
 
 //登录模块路由

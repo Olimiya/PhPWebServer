@@ -13,9 +13,25 @@ class Index extends Controller
         //dump(config('database'));
         //$res = Db::connect();
         //dump($res);
-        $res = Db::query("select * from student where id=?",[1]);
-        dump($res);
-
-
+        echo "访问成功";
+        header('Access-Control-Allow-Origin: *');
+        header("Access-Control-Allow-Headers: token, Origin, X-Requested-With, Content-Type, Accept, Authorization");
+        header('Access-Control-Allow-Methods: POST,GET,PUT,DELETE');
+        if (request()->isOptions()) {
+            exit();
+        }
+        //$res = Db::query("select * from student where id=?", [1]);
+        //dump($res);
     }
+
+//    public function init()
+//    {
+//        header('Access-Control-Allow-Origin: *');
+//        header("Access-Control-Allow-Headers: token, Origin, X-Requested-With, Content-Type, Accept, Authorization");
+//        header('Access-Control-Allow-Methods: POST,GET,PUT,DELETE');
+//
+//        if (request()->isOptions()) {
+//            exit();
+//        }
+//    }
 }
