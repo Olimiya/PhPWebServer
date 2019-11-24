@@ -25,6 +25,4 @@ class CheckBasicInfoController
         return $result;
     }
 
-    
-
 }

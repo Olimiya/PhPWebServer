@@ -23,6 +23,8 @@ Route::rule('modify_info/:role/:id/:kwd/:phone_number/:introduction/:duty/:seque
 //查询个人信息模块路由
 Route::rule('check_info/:id/:role',
     'check_personalinfo/CheckPersonalInfoController/getInfoById');
+Route::rule('check_course/:id/:role',
+    'check_personalinfo/CheckPersonalInfoController/getCourseById');
 //查询学生基本信息模块路由
 Route::rule('new/:data','check_basicinfo/CheckBasicInfoController/index');
 Route::rule('basic/:class','check_basicinfo/CheckBasicInfoController/getInfoByClass');

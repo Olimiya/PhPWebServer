@@ -32,4 +32,23 @@ class CheckPersonalInfoModel
 
         return $res;
     }
+
+    public static function getPersonalCourseById($id,$role)
+    {
+        if($role == "student")
+        {
+            $res = Db::query("select course_id
+         from attend where student_id = ?",[$id]);
+        }
+        else if ($role == "teacher")
+        {
+            $res = Db::query("select course_id from teach where instructor_id = ?",[$id]);
+        }
+        else
+        {
+            $res = "RoleError";
+        }
+
+        return $res;
+    }
 }
