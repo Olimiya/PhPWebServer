@@ -38,6 +38,9 @@ Route::rule('phone_chart/:class','check_chart/CheckChartController/getPhoneNumbe
 /*=======================无效路由*/
 Route::rule('photo_chart/:class','check_chart/CheckChartController/getPhotoByClass');
 
+//管理员管理课程模块
+Route::rule('manage_course/:student_id/:course_id/:instructor_id',
+    'manager_op/ManagementController/manageCourse');
 
 return [
     '__pattern__' => [
