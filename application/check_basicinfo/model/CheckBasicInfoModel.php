@@ -7,7 +7,7 @@ use think\Db;
 class CheckBasicInfoModel
 {
     /**
-     * 根据班级选出适当的学生，返回学生的基本信息
+     * 根据班级class选出适当的学生，返回学生的基本信息
      */
     public static function getStudentBasicInfoByClass($class)
     {

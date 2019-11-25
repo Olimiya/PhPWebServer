@@ -7,9 +7,9 @@ class LogInModel
 {
     /**
      * 比对指定数据库中账号信息
-
+     * 返回结果是登录成功与否的状态信息字符串
+     * 与controller相同
      */
-
     public static function checkId($id, $kwd, $role)
     {
         $id_in_db = "null";

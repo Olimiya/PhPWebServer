@@ -32,7 +32,11 @@ class CheckPersonalInfoModel
 
         return $res;
     }
-
+    /**
+     * @param $id
+     * @param $role:“teacher”或者“student”
+     * @return mixed|string:课程id的列表，json格式
+     */
     public static function getPersonalCourseById($id,$role)
     {
         if($role == "student")

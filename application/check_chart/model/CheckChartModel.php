@@ -42,7 +42,4 @@ class CheckChartModel
          from student where class = ?",[$class]);
         return $res;
     }
-
-
-
 }

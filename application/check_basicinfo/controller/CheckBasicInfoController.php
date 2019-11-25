@@ -5,13 +5,9 @@ use app\check_basicinfo\model\CheckBasicInfoModel;
 
 class CheckBasicInfoController
 {
-    public function index($data)
-    {
-        echo $data;
-        //return "This is app/controller/Index/index";
-    }
     /**
      * 班主任根据自己所在班级查询相应的学生
+     * 参数为class班级，返回该班级所有学生的查询结果
      */
     public function getInfoByClass($class)
     {
@@ -24,5 +20,9 @@ class CheckBasicInfoController
         $result = CheckBasicInfoModel::getStudentBasicInfoByClass($class);
         return $result;
     }
-
+    public function index($data)
+    {
+        echo $data;
+        //return "This is app/controller/Index/index";
+    }
 }

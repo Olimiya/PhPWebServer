@@ -24,6 +24,11 @@ class EntryGradeController
         $newGrade = EntryGradeModel::insertGrade($id, $course_id,$grade);
         return $newGrade;
     }
+
+    /**
+     * @param $course_id 课程编号
+     * @return 该老师所教的该课程所有学生以及成绩的查询结果
+     */
     public function checkGrade($course_id)
     {
         echo 1;

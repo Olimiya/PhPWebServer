@@ -6,6 +6,10 @@ namespace app\check_chart\controller;
 use app\check_chart\model\CheckChartModel;
 class CheckChartController
 {
+    /**
+     * 参数都是教师所在的班级class
+     * 返回值都是该class相应的查询结果
+     */
     public function getNameChartByClass($class)
     {
         header('Access-Control-Allow-Origin: *');

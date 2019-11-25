@@ -11,7 +11,6 @@ use think\Db;
 
 class ModifyPersonalInfoModel
 {
-
     /**
      * 修改学生的基本信息
      */

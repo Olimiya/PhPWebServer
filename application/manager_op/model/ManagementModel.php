@@ -6,6 +6,9 @@ namespace app\manager_op\model;
 use think\Db;
 class ManagementModel
 {
+    /**
+     *均与controller一致，不再赘述
+     */
     public static function insertCourse($student_id,$course_id,$course_name,$instructor_id)
     {
         $data_course = ['course_id' => $course_id,

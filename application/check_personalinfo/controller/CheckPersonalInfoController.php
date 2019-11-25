@@ -16,9 +16,9 @@ class CheckPersonalInfoController
         echo $data;
         //return "This is app/controller/Index/index";
     }
-
     /**
-     * 查询个人信息
+     * 查询个人信息，id和role是参数
+     * 返回值都是JSON格式查询结果
      */
     public function getInfoById($id,$role)
     {
@@ -42,5 +42,4 @@ class CheckPersonalInfoController
         $result = CheckPersonalInfoModel::getPersonalCourseById($id,$role);
         return $result;
     }
-
 }

@@ -18,8 +18,9 @@ class ModifyPersonalInfoController
     }
 
     /**
-     * 修改信息
-     * 教师只能修改密码
+     *参数均为页面上修改后的各项
+     * 无返回值
+     * 该功能尚未完善
      */
     public function modifyInfo($role, $id, $kwd , $phone_number, $introduction, $duty, $sequence_number, $location_number)
     {
@@ -38,5 +39,4 @@ class ModifyPersonalInfoController
               ModifyPersonalInfoModel::modifyInstructorPersonalInfo($id, $kwd);
         }
     }
-
 }

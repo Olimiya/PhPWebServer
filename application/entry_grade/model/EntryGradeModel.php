@@ -8,6 +8,7 @@ class EntryGradeModel
 {
     /**
      * 根据班级选出适当的学生，返回学生的基本信息
+     * 与controller的函数是相对应的，参数和返回值一致，不再赘述
      */
     public static function insertGrade($id, $course_id,$grade)
     {
@@ -23,7 +24,6 @@ class EntryGradeModel
             ->select('grade');
         return $res;
     }
-
     public static function checkGrade($course_id)
     {
         echo 3;
