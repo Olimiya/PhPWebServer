@@ -26,11 +26,9 @@ class EntryGradeModel
     }
     public static function checkGrade($course_id)
     {
-        echo 3;
         $res = Db::table('attend')
             ->where('course_id',$course_id)
             ->select('grade');
-        echo 4;
         return $res;
     }
 }

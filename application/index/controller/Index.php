@@ -20,8 +20,19 @@ class Index extends Controller
         if (request()->isOptions()) {
             exit();
         }
-        //$res = Db::query("select * from student where id=?", [1]);
-        //dump($res);
+
+        echo 1;
+//        for ($i=1; $i<=50; $i++)
+//        {
+//            echo "The number is " . $i . "<br>";
+//            Db::query("select * from student where id=?", [1]);
+//        }
+////        for($i = 1; $i < 100000)
+////        {
+////            Db::query("select * from student where id=?", [1]);
+////        }
+//        $res = Db::query("select * from student where id=?", [1]);
+//        dump($res);
     }
 
 //    public function init()
